@@ -8,28 +8,59 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <form>
-        <label for="formName">Nome e Cognome</label>
-        <input type="text" id="formName" />
-
-        <label for="formKm">Quanti km percorrerai?</label>
-        <input type="text" id="formKm" />
-
-        <label for="formAge">Fascia d'età:</label>
-        <select id="formAge">
-            <option value="minChoice">Minorenne</option>
-            <option value="magChoice">Maggiorenne</option>
-            <option value="overChoice">Over 65</option>
-        </select>
-        
-    </form>
-
-    <button type="submit" id="generate">Genera Biglietto</button>
-    <button type="reset" id="cancel">Annulla</button>
-
-    <h1 id="h1"></h1>
-    <h2 id="h2"></h2>
-    <h3 id="h3"></h3>
+    <div class="d-flex align-center flex-between">
+        <div class="form-container">
+            <h1>TRENITALIA</h1>
+            <h2>Crea il tuo biglietto</h2>
+            <form>
+                <div>
+                    <label for="formName">Nome e Cognome</label>
+                    <input type="text" id="formName" />
+                </div>
+                
+                <div>
+                    <label for="formKm">Quanti km percorrerai?</label>
+                    <input type="text" id="formKm" />
+                </div>
+                
+                <div>
+                    <label for="formAge">Seleziona la tua fascia d'età:</label>
+                    <select id="formAge">
+                        <option value="minChoice">Minorenne</option>
+                        <option value="magChoice">Maggiorenne</option>
+                        <option value="overChoice">Over 65</option>
+                    </select>
+                </div>         
+            </form>
+            <button type="submit" id="generate">Genera Biglietto</button>
+            <button type="reset" id="cancel">Annulla</button>
+        </div>
+        <div class="ticket-container">
+            <h2>Biglietto</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome del passeggero</th>
+                        <th>Offerta</th>
+                        <th>Carrozza</th>
+                        <th>Codice CP</th>
+                        <th>Costo Biglietto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="ticketName"></td>
+                        <td id="ticketOffer"></td>
+                        <td id="ticketCarriage"></td>
+                        <td id="ticketCode"></td>
+                        <td id="ticketPrice"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+    </div>    
+    
 
 
     <script type="text/javascript" src="js/main.js"></script>

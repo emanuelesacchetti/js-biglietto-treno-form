@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.d-flex { display: flex; }
+.flex-between { justify-content: space-between; }
+.align-center { align-items: center; }
+
+.form-container {
+    width: 500px;
+    padding: 70px;
+    border-radius: 40px;
+    background-color: #a52a2ae0;
+    height: calc(100vh - 20px);
+    text-align: center;
+    margin: 10px;
+}
+form {
+    margin: 20px 0;
+}
+input, select, label {
+    display: inline-block;
+    margin: 15px 0;
+    font-size: 20px;
+}
+.form-container h1 {
+    font-size: 50px;
+    color: white;
+}
+.form-container h2 {
+    font-size: 30px;
+}
+.form-container button {
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 2px white solid;
+    color: white;
+}
+.ticket-container{
+    height: 300px;
+    width: 600px;
+    margin: auto;
+    background-color: gray;
+    text-align: center;
+}
+table {
+    width: 90%;
+    margin: auto;
+    background-color: white;
+    height: 70%;
+    border-spacing: 5px;
+}
