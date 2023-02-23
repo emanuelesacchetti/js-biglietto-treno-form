@@ -8,8 +8,24 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <form>
+        <label for="formName">Nome e Cognome</label>
+        <input type="text" id="formName" />
 
+        <label for="formKm">Quanti km percorrerai?</label>
+        <input type="text" id="formKm" />
+
+        <label for="formAge">Fascia d'età:</label>
+        <select id="formAge">
+            <option value="minChoice">Minorenne</option>
+            <option value="magChoice">Maggiorenne</option>
+            <option value="overChoice">Over 65</option>
+        </select>
+        
+    </form>
+
+    <button type="submit" id="generate">Genera Biglietto</button>
+    <button type="reset" id="cancel">Annulla</button>
 
 
 
