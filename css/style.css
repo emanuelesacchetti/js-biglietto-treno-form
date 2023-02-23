@@ -7,15 +7,27 @@
 .d-flex { display: flex; }
 .flex-between { justify-content: space-between; }
 .align-center { align-items: center; }
+.flex-column { flex-direction: column; }
+.d-none { display: none; }
+.d-block { display: block;}
 
+
+.bg-img {
+    background-image: url(../img/trenitalia.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
 .form-container {
     width: 500px;
     padding: 70px;
     border-radius: 40px;
-    background-color: #a52a2ae0;
+    background-color: rgba(255, 255, 255, 0.5);
     height: calc(100vh - 20px);
     text-align: center;
     margin: 10px;
+    border: 5px solid #a52a2ae0;
 }
 form {
     margin: 20px 0;
@@ -24,10 +36,11 @@ input, select, label {
     display: inline-block;
     margin: 15px 0;
     font-size: 20px;
+    font-weight: bold;
 }
 .form-container h1 {
     font-size: 50px;
-    color: white;
+    color: #a52a2ae0;
 }
 .form-container h2 {
     font-size: 30px;
@@ -36,21 +49,54 @@ input, select, label {
     padding: 10px;
     font-size: 20px;
     border-radius: 20px;
-    background-color: transparent;
-    border: 2px white solid;
+}
+#generate {
+    color: #a52a2ae0;
+    border: 2px #a52a2ae0 solid;
+    background-color: white;
+}
+#cancel {
+    background-color: #a52a2ae0;
+    border: 2px solid white;
     color: white;
 }
 .ticket-container{
     height: 300px;
-    width: 600px;
+    width: 650px;
     margin: auto;
-    background-color: gray;
+    background-color: #a52a2ae0;
     text-align: center;
+    border-radius: 40px;
+    border: 5px white solid;
+}
+.ticket-container h2 {
+    padding: 10px;
+    color: white;
 }
 table {
-    width: 90%;
+    width: 600px;
     margin: auto;
     background-color: white;
     height: 70%;
-    border-spacing: 5px;
+    border-spacing: 0;
+    background-color: white;
 }
+table {
+    border: 2px black solid;
+}
+.first {
+    background-color: rgb(202, 200, 200);
+    font-weight: bold;
+}
+th {
+    height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+td {
+    font-size: 20px;
+    padding: 10px;
+}
+
+

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="d-flex align-center flex-between">
+    <div class="d-flex align-center flex-between bg-img" id="hero">
         <div class="form-container">
             <h1>TRENITALIA</h1>
             <h2>Crea il tuo biglietto</h2>
@@ -35,12 +35,12 @@
             <button type="submit" id="generate">Genera Biglietto</button>
             <button type="reset" id="cancel">Annulla</button>
         </div>
-        <div class="ticket-container">
-            <h2>Biglietto</h2>
+        <div class="ticket-container" id="ticketContainer">
+            <h2>IL TUO BIGLIETTO</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>Nome del passeggero</th>
+                        <th class="first">Nome del passeggero</th>
                         <th>Offerta</th>
                         <th>Carrozza</th>
                         <th>Codice CP</th>
@@ -49,7 +49,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td id="ticketName"></td>
+                        <td id="ticketName" class="first"></td>
                         <td id="ticketOffer"></td>
                         <td id="ticketCarriage"></td>
                         <td id="ticketCode"></td>
