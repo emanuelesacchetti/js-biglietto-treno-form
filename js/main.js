@@ -15,31 +15,27 @@ domButtonGenerate.addEventListener('click',
         const domFormKmText = domFormKm.value;
         const domFormAgeText = domFormAge.value;
 
-        //palesemente il value sulle option non mi legge il contenuto ma il suo value
+        document.getElementById('h1').innerHTML = domFormNameText
+        document.getElementById('h2').innerHTML = domFormKmText
 
-        console.log(domFormNameText + domFormAgeText + domFormKmText);
+        if(domFormAgeText == 'minChoice'){
+            document.getElementById('h3').innerHTML = 'minorenne'
+        } else if(domFormAgeText == 'overChoice') {
+            document.getElementById('h3').innerHTML = 'over 65'
+        } else {
+            document.getElementById('h3').innerHTML = 'maggiorenne'
+        }
     }
 );
 
 
 domButtonCancel.addEventListener('click', 
     function() {
-        const domFormNameText = domFormName.value;
-        const domFormKmText = domFormKm.value;
-        const domFormAgeText = domFormAge.value;
-
-        //date queste tre costanti al click, le costanti anvranno value vuoto
-        //MA NON SUCCEDE. in più il pulsante cancella ora non cencella più
-
-        domFormNameText.value = "";
-        domFormKmText.value = "";
-        domFormAgeText.value = "";
-
-        //anche se facendo la prova con il console.log il tutto sembra essere oprativo
-        //deduco ci sia un problema nell'ordinare al value di essere vuoto
-
-        console.log(domFormNameText + domFormAgeText + domFormKmText);
-
+        domFormName.value = "";
+        domFormKm.value = "";
+        domFormAge.value = "";
     }
 );
+
+
 
