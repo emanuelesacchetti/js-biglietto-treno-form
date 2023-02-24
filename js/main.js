@@ -14,7 +14,7 @@ domButtonGenerate.addEventListener('click',
     function () {
         
         const domFormNameText = domFormName.value;
-        const domFormKmText = domFormKm.value;
+        const domFormKmText = parseInt(domFormKm.value);
         const domFormAgeText = domFormAge.value;
 
         let price = (domFormKmText * kmPrice);
@@ -25,8 +25,8 @@ domButtonGenerate.addEventListener('click',
         let overDiscount = ((price * 40) / 100);
         let overPrice = price - overDiscount;
 
-        const carriageNumber = Math.floor((Math.random() * 10) + 1);
-        const codeNumber = Math.floor((Math.random() * 10000) + 9000);
+        const carriageNumber = Math.floor(Math.random() * 10) + 1;
+        const codeNumber = Math.floor(Math.random() * 10000) + 9000;
 
         if(domFormAgeText == 'minChoice'){
             document.getElementById('ticketOffer').innerHTML = 'Sconto 20%';
@@ -44,7 +44,8 @@ domButtonGenerate.addEventListener('click',
         document.getElementById('ticketCarriage').innerHTML = carriageNumber;
         document.getElementById('ticketCode').innerHTML = codeNumber;
 
-        
+        const ticketContainer = document.getElementById('ticketContainer');
+        ticketContainer.classList.remove('d-none');
         
     }
 );
@@ -54,7 +55,9 @@ domButtonCancel.addEventListener('click',
     function() {
         domFormName.value = "";
         domFormKm.value = "";
-        domFormAge.value = "";
+        domFormAge.value = "minChoice";
+
+        ticketContainer.classList.add('d-none');
     }
 );
 
